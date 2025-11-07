@@ -1,0 +1,52 @@
+@import "tailwindcss";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+  background-color:oklch(27.4% 0.006 286.033) ;
+}
+.status{
+  margin-top:20px;
+  margin-bottom: 40px;
+}
+.game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  height: 100vh;
+}
+.tile{
+  height: 80px ;
+  width: 80px;
+}
+.reset-btn, .winner{
+  margin-top: 20px;
+}
+button:hover{
+  cursor: pointer;
+}
+.reset-btn:hover{
+  transform: translateY(-4px) scale(1.02);
+}
+.win {
+  position: relative;
+  color: #fff !important; /* make it stand out */
+  background-color: #f43f5e; /* rose-500 */
+  transition: all 0.3s ease;
+}
+
+.win::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 3px;
+  background-color: white;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
